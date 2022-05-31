@@ -1,0 +1,14 @@
+Para o primeiro exercício, com a ajuda do json-server devido à rapidez, o dataset foi partido em dois: um para a lógica de cidades e outro para a lógica de ligações
+Para importar os datasets foram usados os seguintes comandos:
+    - mongoimport --jsonArray --db MAPA2022 --collection cidades --file cidades.json
+    - mongoimport –-jsonArray –-db MAPA2022 –-collection ligacoes –-file ligacoes.json
+
+Esta separação depois é útil para fazer joins necessários para as ultimas queries
+
+Após a população de dados na BD, foi usado o mongoose para realizar as queries à BD que são pedidas nas alíneas do primeiro exercício.
+
+Foi criado um script em python para a resolução da primeira alínea do segundo exercício (aquecimento). Este script tem como nome aquecimento.py e em cada função indica o resultado para cada alínea
+Ao correr o script são apresentados os resultados pedidos, linha a linha
+Usa a apikey contida num ficheiro ".env" buscado manualmente
+
+Para a aplicação do exercicio 2, a aplicação vai buscar automaticamente o token ao servidor e guarda num ficheiro de ambiente chamado ".env"

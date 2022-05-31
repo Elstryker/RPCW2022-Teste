@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h2
+        a(href='/') Voltar à página inicial
+
+    h1 Lista de classes
+
+    ul
+        each element in classes
+            li 
+                ul
+                    li 
+                        a(href='/classes/' + element.codigo) Código : #{element.codigo}
+                    li Título : #{element.titulo}

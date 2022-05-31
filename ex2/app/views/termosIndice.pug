@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+    h2
+        a(href='/') Voltar à página inicial
+
+    table
+        tr
+            th Termo
+            th Id da Classe
+            th Titulo da Classe
+        each indice in termos
+            tr
+                td=indice.termo
+                td
+                    a(href='/classes/' + indice.idClasse)=indice.idClasse
+                td
+                    a(href='/classes/' + indice.idClasse)=indice.tituloClasse

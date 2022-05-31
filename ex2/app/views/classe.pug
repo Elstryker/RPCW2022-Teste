@@ -1,0 +1,38 @@
+extends layout
+
+block content
+    h2
+        a(href='/') Voltar à página inicial
+
+    h1 Lista de classes
+
+    h3 Nivel : #{classe.nivel}
+    h3 Código : #{classe.codigo}
+    h3 Título : #{classe.titulo}
+    h3 Descricao : #{classe.descricao}
+
+    br
+
+    h3 Filhos
+
+        ul
+            
+            each filho in classe.filhos
+    
+                li 
+                    ul 
+                        li 
+                            a(href='/classes/' + filho.codigo) Código : #{filho.codigo}
+                        li Título : #{filho.titulo}
+
+    
+    if classe.nivel == 3
+        h3 Termos de índice
+
+            ul
+                each termo in classe.termosInd
+                    li
+                        ul
+                            li idTI : #{termo.idTI}
+                            li 
+                                a(href='/termosIndice') Termo : #{termo.termo}
